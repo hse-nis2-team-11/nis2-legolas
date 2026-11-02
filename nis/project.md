@@ -25,7 +25,7 @@ https://distsys.ru/osukhoroslov/nis2/src/branch/main/project-tasks/p04-legolas.m
 Будем исследовать сценарии вида:
 
 ```math
-(\text{number\_of\_clients}, \text{injection\_policy}, \text{number\_of\_injections\_in\_attempt})\\\in\\\{1, 3, 9, N\} \times \{\text{Random}, \text{RoundRobinStateOp}\} \times \{1, 2 \}
+(\text{NumberOfClients}, \text{InjectionPolicy}, \text{NumberOfInjectionsInAttempt})\\\in\\\{1, 3, 9, N\} \times \{\text{Random}, \text{RoundRobinStateOp}\} \times \{1, 2 \}
 ```
 
 Проверять будем свойство safety, а именно: корректность записанных данных после восстановления.
