@@ -1,0 +1,26 @@
+{
+  "base_image": "ubuntu:22.04@sha256:076e7bf82319619f28dd0aa9c02ab34b055ad37100395b4f49a2ffba04fb5e11",
+  "legolas": {
+    "commit": "84278d313f985688d9efa1ac62599207c055ecfd",
+    "url": "https://codeload.github.com/OrderLab/Legolas/tar.gz/84278d313f98",
+    "sha256": "03aebfba5a2335c180c73d8fd30c0165c628a5423ac9104530807a9b07e5d91d",
+    "bytes": 340294
+  },
+  "zookeeper": {
+    "commit": "803c7f1a12f85978cb049af5e4ef23bd8b688715",
+    "tag": "release-3.6.2",
+    "url": "https://codeload.github.com/apache/zookeeper/tar.gz/refs/tags/release-3.6.2",
+    "sha256": "42fed2bc5c266bc9640d4581265de8b1d66a0837576505e189c7e7b613f78e6b",
+    "bytes": 3313137
+  },
+  "jdk": {
+    "release": "jdk8u504-b01",
+    "url": "https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u504-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u504b01.tar.gz",
+    "sha256": "9c70e102f527ac674ac2fe9c7d47b9a04e2d19842ba5ab8e9b33f368bbadfaea"
+  },
+  "maven": {
+    "version": "3.9.9",
+    "url": "https://archive.apache.org/dist/maven/maven-3/3.9.9/binaries/apache-maven-3.9.9-bin.tar.gz",
+    "sha512": "a555254d6b53d267965a3404ecb14e53c3827c09c3b94b5678835887ab404556bfaf78dcfe03ba76fa2508649dca8531c74bca4d5846513522404d48e8c4ac8b"
+  }
+}

@@ -1,0 +1,16 @@
+Analyzing ZooKeeper version 3.6.2...
+2026-11-03 18:08:12,778 [trial:] - INFO  [AnalyzerMain] - Legolas analyzer initialization finished
+2026-11-03 18:08:12,780 [trial:] - INFO  [AnalyzerMain] - Legolas analyzer started on Tue Nov 03 18:08:12 GMT 2026
+2026-11-03 18:08:21,364 [trial:] - INFO  [AbstractStateTransformer] - Running abstract state analysis and instrumentation
+2026-11-03 18:08:21,374 [trial:] - INFO  [ExceptionTable] - Exception instance table initialized
+2026-11-03 18:08:21,375 [trial:] - INFO  [InjectionTransformer] - 0 injection spec(s)
+2026-11-03 18:08:21,383 [trial:] - INFO  [AbstractStateTransformer] - Analyzed 840 classes and found 42 state machine classes
+2026-11-03 18:08:21,596 [trial:] - INFO  [AbstractStateTransformer] - Identified in total 233 ASVs in 42 ASMs
+2026-11-03 18:08:21,639 [trial:] - INFO  [ExceptionExtractor] - Extracted exceptions for 6108 methods.
+2026-11-03 18:08:22,084 [trial:] - INFO  [InjectionTransformer] - Instrumented 524 methods, 2056 points (filtered 0 points)
+2026-11-03 18:08:22,124 [trial:] - INFO  [AbstractStateTransformer] - Successfully injected LegolasAgent.init() call in org.apache.zookeeper.server.quorum.QuorumPeerMain
+2026-11-03 18:08:22,126 [trial:] - INFO  [AbstractStateAnalysis] - ASV stats: total=233, mean=5.5476190476190474, max=31, min=1
+2026-11-03 18:08:23,696 [trial:] - INFO  [AnalyzerMain] - Legolas analyzer finished on Tue Nov 03 18:08:23 GMT 2026
+2026-11-03 18:08:23,697 [trial:] - INFO  [AnalyzerMain] - Legolas analyzer has run for 0 min. 10 sec. 918 ms.
+Copying instrumented classes back to ZooKeeper source in /opt/nis2-legolas/.local/zookeeper
+Copying Legolas common code to ZooKeeper source in /opt/nis2-legolas/.local/zookeeper

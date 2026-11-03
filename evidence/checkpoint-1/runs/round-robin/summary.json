@@ -1,0 +1,198 @@
+{
+  "policy": "RoundRobinStateOp",
+  "trial_count": 3,
+  "completed_workloads": 1,
+  "trials_with_granted_injection": 2,
+  "trials_with_executed_injection": 2,
+  "preservation_verdict": "not_checked",
+  "note": "Author workload progress is not a data-preservation verdict or a count of bugs.",
+  "trials": [
+    {
+      "trial_id": 0,
+      "started_local": "2026-11-03 18:14:07,948",
+      "recorded_duration_seconds": 9.781959,
+      "phase_progress": {
+        "create": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "read": [
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ]
+        ],
+        "write": [
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 10,
+        "read": 120,
+        "write": 120
+      },
+      "workload_completed": true,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 7817,
+        "4": 29128,
+        "1": 3
+      },
+      "observed_state_tuples": 194,
+      "granted_injections": [],
+      "executed_injection_evidence": [],
+      "injection_stacks": [],
+      "preservation_verdict": "not_checked"
+    },
+    {
+      "trial_id": 1,
+      "started_local": "2026-11-03 18:14:19,808",
+      "recorded_duration_seconds": 30.033124,
+      "phase_progress": {
+        "create": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 7
+      },
+      "workload_completed": false,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 497,
+        "4": 2752,
+        "5": 1,
+        "1": 3
+      },
+      "observed_state_tuples": 114,
+      "granted_injections": [
+        {
+          "time_seconds": 0.376563155,
+          "server_id": 1,
+          "state_machine": "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+          "state_method": "<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>",
+          "state_id": 0,
+          "operation": "<java.util.Properties: void load(java.io.InputStream)>",
+          "delay": false,
+          "exception": "java.io.IOException",
+          "injection_id": 0
+        }
+      ],
+      "executed_injection_evidence": [
+        {
+          "file": "trials/1/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:14:20,189 [myid:] - INFO  [main:LegolasAgent@321] - LegolasAgent injecting exception java.io.IOException"
+        }
+      ],
+      "injection_stacks": [
+        {
+          "file": "trials/1/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:14:20,189 [myid:] - INFO  [main:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.server.quorum.QuorumPeerConfig,parse,183), (org.apache.zookeeper.server.quorum.QuorumPeerMain,initializeAndRun,124), (org.apache.zookeeper.server.quorum.QuorumPeerMain,main,90), ]"
+        }
+      ],
+      "preservation_verdict": "not_checked"
+    },
+    {
+      "trial_id": 2,
+      "started_local": "2026-11-03 18:14:51,856",
+      "recorded_duration_seconds": 30.039684,
+      "phase_progress": {
+        "create": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 7
+      },
+      "workload_completed": false,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 496,
+        "4": 2758,
+        "5": 1,
+        "1": 3
+      },
+      "observed_state_tuples": 112,
+      "granted_injections": [
+        {
+          "time_seconds": 0.376310782,
+          "server_id": 1,
+          "state_machine": "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+          "state_method": "<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>",
+          "state_id": 0,
+          "operation": "<java.io.FileInputStream: void close()>",
+          "delay": false,
+          "exception": "java.io.IOException",
+          "injection_id": 0
+        }
+      ],
+      "executed_injection_evidence": [
+        {
+          "file": "trials/2/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:14:52,234 [myid:] - INFO  [main:LegolasAgent@321] - LegolasAgent injecting exception java.io.IOException"
+        }
+      ],
+      "injection_stacks": [
+        {
+          "file": "trials/2/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:14:52,234 [myid:] - INFO  [main:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.server.quorum.QuorumPeerConfig,parse,186), (org.apache.zookeeper.server.quorum.QuorumPeerMain,initializeAndRun,124), (org.apache.zookeeper.server.quorum.QuorumPeerMain,main,90), ]"
+        }
+      ],
+      "preservation_verdict": "not_checked"
+    }
+  ]
+}

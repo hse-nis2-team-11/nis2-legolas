@@ -1,0 +1,228 @@
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Build Order:
+[INFO] 
+[INFO] framework                                                          [pom]
+[INFO] common                                                             [jar]
+[INFO] analyzer                                                           [jar]
+[INFO] reporter                                                           [jar]
+[INFO] injector                                                           [jar]
+[INFO] orchestrator                                                       [jar]
+[INFO] driver                                                             [pom]
+[INFO] zookeeper-client                                                   [pom]
+[INFO] zk_3_6_2                                                           [jar]
+[INFO] 
+[INFO] -----------------< edu.umich.order.legolas:framework >------------------
+[INFO] Building framework 1.0                                             [1/9]
+[INFO]   from pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] -------------------< edu.umich.order.legolas:common >-------------------
+[INFO] Building common 1.0                                                [2/9]
+[INFO]   from common/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ common ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/common/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ common ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 34 source files to /opt/nis2-legolas/.local/legolas/common/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ common ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/common/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ common ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ common ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ common ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/common/target/common-1.0.jar
+[INFO] 
+[INFO] ------------------< edu.umich.order.legolas:analyzer >------------------
+[INFO] Building analyzer 1.0                                              [3/9]
+[INFO]   from analyzer/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ analyzer ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/analyzer/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ analyzer ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 30 source files to /opt/nis2-legolas/.local/legolas/analyzer/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ analyzer ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/analyzer/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ analyzer ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ analyzer ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ analyzer ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/analyzer/target/analyzer-1.0.jar
+[INFO] 
+[INFO] --- assembly:3.1.0:single (make-assembly) @ analyzer ---
+[INFO] artifact com.google.guava:guava: checking for updates from central
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/analyzer/target/analyzer-1.0-jar-with-dependencies.jar
+[INFO] 
+[INFO] ------------------< edu.umich.order.legolas:reporter >------------------
+[INFO] Building reporter 1.0                                              [4/9]
+[INFO]   from reporter/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ reporter ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/reporter/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ reporter ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 12 source files to /opt/nis2-legolas/.local/legolas/reporter/target/classes
+[INFO] /opt/nis2-legolas/.local/legolas/reporter/src/main/java/edu/umich/order/legolas/reporter/Trial.java: /opt/nis2-legolas/.local/legolas/reporter/src/main/java/edu/umich/order/legolas/reporter/Trial.java uses unchecked or unsafe operations.
+[INFO] /opt/nis2-legolas/.local/legolas/reporter/src/main/java/edu/umich/order/legolas/reporter/Trial.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ reporter ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/reporter/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ reporter ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ reporter ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ reporter ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/reporter/target/reporter-1.0.jar
+[INFO] 
+[INFO] --- assembly:3.1.0:single (make-assembly) @ reporter ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/reporter/target/reporter-1.0-jar-with-dependencies.jar
+[INFO] 
+[INFO] ------------------< edu.umich.order.legolas:injector >------------------
+[INFO] Building injector 1.0                                              [5/9]
+[INFO]   from injector/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ injector ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/injector/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ injector ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 16 source files to /opt/nis2-legolas/.local/legolas/injector/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ injector ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/injector/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ injector ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ injector ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ injector ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/injector/target/injector-1.0.jar
+[INFO] 
+[INFO] --- assembly:3.1.0:single (make-assembly) @ injector ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/injector/target/injector-1.0-jar-with-dependencies.jar
+[INFO] 
+[INFO] ----------------< edu.umich.order.legolas:orchestrator >----------------
+[INFO] Building orchestrator 1.0                                          [6/9]
+[INFO]   from orchestrator/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ orchestrator ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/orchestrator/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ orchestrator ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 40 source files to /opt/nis2-legolas/.local/legolas/orchestrator/target/classes
+[INFO] /opt/nis2-legolas/.local/legolas/orchestrator/src/main/java/edu/umich/order/legolas/orchestrator/instance/hbase/HBaseOrchestrator.java: Some input files use unchecked or unsafe operations.
+[INFO] /opt/nis2-legolas/.local/legolas/orchestrator/src/main/java/edu/umich/order/legolas/orchestrator/instance/hbase/HBaseOrchestrator.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ orchestrator ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/orchestrator/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ orchestrator ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ orchestrator ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ orchestrator ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/orchestrator/target/orchestrator-1.0.jar
+[INFO] 
+[INFO] --- assembly:3.1.0:single (make-assembly) @ orchestrator ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/orchestrator/target/orchestrator-1.0-jar-with-dependencies.jar
+[INFO] 
+[INFO] -------------------< edu.umich.order.legolas:driver >-------------------
+[INFO] Building driver 1.0                                                [7/9]
+[INFO]   from driver/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] --------------< edu.umich.order.legolas:zookeeper-client >--------------
+[INFO] Building zookeeper-client 1.0                                      [8/9]
+[INFO]   from driver/zookeeper/pom.xml
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO] 
+[INFO] ------------------< edu.umich.order.legolas:zk_3_6_2 >------------------
+[INFO] Building zk_3_6_2 1.0                                              [9/9]
+[INFO]   from driver/zookeeper/3.6.2/pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ zk_3_6_2 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:compile (default-compile) @ zk_3_6_2 ---
+[INFO] Changes detected - recompiling the module!
+[WARNING] File encoding has not been set, using platform encoding UTF-8, i.e. build is platform dependent!
+[INFO] Compiling 3 source files to /opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ zk_3_6_2 ---
+[WARNING] Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory /opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.7.0:testCompile (default-testCompile) @ zk_3_6_2 ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- surefire:2.22.2:test (default-test) @ zk_3_6_2 ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- jar:3.4.1:jar (default-jar) @ zk_3_6_2 ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0.jar
+[INFO] 
+[INFO] --- assembly:3.1.0:single (make-assembly) @ zk_3_6_2 ---
+[INFO] Building jar: /opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
+[INFO] ------------------------------------------------------------------------
+[INFO] Reactor Summary for framework 1.0:
+[INFO] 
+[INFO] framework .......................................... SUCCESS [  0.002 s]
+[INFO] common ............................................. SUCCESS [ 23.444 s]
+[INFO] analyzer ........................................... SUCCESS [01:30 min]
+[INFO] reporter ........................................... SUCCESS [  0.357 s]
+[INFO] injector ........................................... SUCCESS [  0.373 s]
+[INFO] orchestrator ....................................... SUCCESS [  3.453 s]
+[INFO] driver ............................................. SUCCESS [  0.000 s]
+[INFO] zookeeper-client ................................... SUCCESS [  0.000 s]
+[INFO] zk_3_6_2 ........................................... SUCCESS [  3.440 s]
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  02:01 min
+[INFO] Finished at: 2026-11-03T18:06:39Z
+[INFO] ------------------------------------------------------------------------
