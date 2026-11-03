@@ -1,0 +1,221 @@
+{
+  "policy": "Random",
+  "trial_count": 3,
+  "completed_workloads": 1,
+  "trials_with_granted_injection": 3,
+  "trials_with_executed_injection": 3,
+  "preservation_verdict": "not_checked",
+  "note": "Author workload progress is not a data-preservation verdict or a count of bugs.",
+  "trials": [
+    {
+      "trial_id": 0,
+      "started_local": "2026-11-03 18:16:25,822",
+      "recorded_duration_seconds": 30.047254,
+      "phase_progress": {
+        "create": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 7
+      },
+      "workload_completed": false,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 503,
+        "4": 2833,
+        "5": 1,
+        "1": 3
+      },
+      "observed_state_tuples": 120,
+      "granted_injections": [
+        {
+          "time_seconds": 0.543761476,
+          "server_id": 1,
+          "state_machine": "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+          "state_method": "<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>",
+          "state_id": 0,
+          "operation": "<java.io.OutputStream: void write(byte[],int,int)>",
+          "delay": false,
+          "exception": "java.io.IOException",
+          "injection_id": 0
+        }
+      ],
+      "executed_injection_evidence": [
+        {
+          "file": "trials/0/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:16:26,367 [myid:1] - INFO  [main:LegolasAgent@321] - LegolasAgent injecting exception java.io.IOException"
+        }
+      ],
+      "injection_stacks": [
+        {
+          "file": "trials/0/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:16:26,367 [myid:1] - INFO  [main:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.common.AtomicFileOutputStream,write,72), (sun.nio.cs.StreamEncoder,writeBytes,221), (sun.nio.cs.StreamEncoder,implFlushBuffer,291), (sun.nio.cs.StreamEncoder,implFlush,295), (sun.nio.cs.StreamEncoder,flush,141), (java.io.OutputStreamWriter,flush,229), (java.io.BufferedWriter,flush,254), (org.apache.zookeeper.common.AtomicFileWritingIdiom,<init>,72), (org.apache.zookeeper.common.AtomicFileWritingIdiom,<init>,54), (org.apache.zookeeper.server.quorum.QuorumPeer,writeLongToFile,2129), (org.apache.zookeeper.server.quorum.QuorumPeer,loadDataBase,1110), (org.apache.zookeeper.server.quorum.QuorumPeer,start,1078), (org.apache.zookeeper.server.quorum.QuorumPeerMain,runFromConfig,227), (org.apache.zookeeper.server.quorum.QuorumPeerMain,initializeAndRun,136), (org.apache.zookeeper.server.quorum.QuorumPeerMain,main,90), ]"
+        }
+      ],
+      "preservation_verdict": "not_checked"
+    },
+    {
+      "trial_id": 1,
+      "started_local": "2026-11-03 18:16:57,903",
+      "recorded_duration_seconds": 8.852476,
+      "phase_progress": {
+        "create": [
+          [
+            3,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ],
+        "read": [
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ]
+        ],
+        "write": [
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ],
+          [
+            40,
+            40
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 10,
+        "read": 120,
+        "write": 120
+      },
+      "workload_completed": true,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 7819,
+        "4": 29220,
+        "5": 1,
+        "1": 3
+      },
+      "observed_state_tuples": 182,
+      "granted_injections": [
+        {
+          "time_seconds": 0.698844602,
+          "server_id": 1,
+          "state_machine": "org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread",
+          "state_method": "<org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread: void run()>",
+          "state_id": 0,
+          "operation": "<java.net.Socket: void setKeepAlive(boolean)>",
+          "delay": false,
+          "exception": "java.net.SocketException",
+          "injection_id": 0
+        }
+      ],
+      "executed_injection_evidence": [
+        {
+          "file": "trials/1/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:16:58,604 [myid:1] - INFO  [QuorumConnectionThread-[myid=1]-3:LegolasAgent@321] - LegolasAgent injecting exception java.net.SocketException"
+        }
+      ],
+      "injection_stacks": [
+        {
+          "file": "trials/1/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:16:58,604 [myid:1] - INFO  [QuorumConnectionThread-[myid=1]-3:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.server.quorum.QuorumCnxManager,setSockOpts,854), (org.apache.zookeeper.server.quorum.QuorumCnxManager,initiateConnection,382), (org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread,run,457), (java.util.concurrent.ThreadPoolExecutor,runWorker,1149), (java.util.concurrent.ThreadPoolExecutor$Worker,run,624), (java.lang.Thread,run,750), ]"
+        }
+      ],
+      "preservation_verdict": "not_checked"
+    },
+    {
+      "trial_id": 2,
+      "started_local": "2026-11-03 18:17:08,811",
+      "recorded_duration_seconds": 30.035042,
+      "phase_progress": {
+        "create": [
+          [
+            0,
+            3
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            4
+          ]
+        ]
+      },
+      "completed_operations": {
+        "create": 7
+      },
+      "workload_completed": false,
+      "event_counts": {
+        "2": 1,
+        "0": 3,
+        "3": 494,
+        "4": 2812,
+        "5": 1,
+        "1": 3
+      },
+      "observed_state_tuples": 112,
+      "granted_injections": [
+        {
+          "time_seconds": 0.46999043,
+          "server_id": 1,
+          "state_machine": "org.apache.zookeeper.server.quorum.QuorumPeerMain",
+          "state_method": "<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>",
+          "state_id": 0,
+          "operation": "<org.apache.jute.OutputArchive: void endRecord(org.apache.jute.Record,java.lang.String)>",
+          "delay": false,
+          "exception": "java.io.IOException",
+          "injection_id": 0
+        }
+      ],
+      "executed_injection_evidence": [
+        {
+          "file": "trials/2/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:17:09,287 [myid:1] - INFO  [main:LegolasAgent@321] - LegolasAgent injecting exception java.io.IOException"
+        }
+      ],
+      "injection_stacks": [
+        {
+          "file": "trials/2/logs-1/zookeeper-legolas-server-legolas.out",
+          "line": "2026-11-03 18:17:09,287 [myid:1] - INFO  [main:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.server.DataNode,serialize,187), (org.apache.jute.BinaryOutputArchive,writeRecord,126), (org.apache.zookeeper.server.DataTree,serializeNodeData,1355), (org.apache.zookeeper.server.DataTree,serializeNode,1339), (org.apache.zookeeper.server.DataTree,serializeNode,1348), (org.apache.zookeeper.server.DataTree,serializeNode,1348), (org.apache.zookeeper.server.DataTree,serializeNodes,1363), (org.apache.zookeeper.server.DataTree,serialize,1373), (org.apache.zookeeper.server.util.SerializeUtils,serializeSnapshot,171), (org.apache.zookeeper.server.persistence.FileSnap,serialize,227), (org.apache.zookeeper.server.persistence.FileSnap,serialize,246), (org.apache.zookeeper.server.persistence.FileTxnSnapLog,save,472), (org.apache.zookeeper.server.persistence.FileTxnSnapLog,restore,291), (org.apache.zookeeper.server.ZKDatabase,loadDataBase,285), (org.apache.zookeeper.server.quorum.QuorumPeer,loadDataBase,1093), (org.apache.zookeeper.server.quorum.QuorumPeer,start,1078), (org.apache.zookeeper.server.quorum.QuorumPeerMain,runFromConfig,227), (org.apache.zookeeper.server.quorum.QuorumPeerMain,initializeAndRun,136), (org.apache.zookeeper.server.quorum.QuorumPeerMain,main,90), ]"
+        }
+      ],
+      "preservation_verdict": "not_checked"
+    }
+  ]
+}

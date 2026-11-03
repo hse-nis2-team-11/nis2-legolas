@@ -1,0 +1,93 @@
+2026-11-03 18:16:25,731 [trial:] - INFO  [OrchestratorMain] - Bootstrapping Legolas orchestrator server
+2026-11-03 18:16:25,795 [trial:] - DEBUG [ExceptionTableParser] - Parsing exceptions from file /opt/nis2-legolas/.local/legolas/conf/exception_table.zookeeper
+2026-11-03 18:16:25,795 [trial:] - DEBUG [ExceptionTableParser] - Parsing exceptions from include file /opt/nis2-legolas/.local/legolas/conf/exception_table.javalib
+2026-11-03 18:16:25,795 [trial:] - DEBUG [ExceptionTableParser] - Parsing exceptions from file /opt/nis2-legolas/.local/legolas/conf/exception_table.javalib
+2026-11-03 18:16:25,796 [trial:] - DEBUG [ExceptionTableParser] - Parsed 43 exceptions from exception table /opt/nis2-legolas/.local/legolas/conf/exception_table.javalib: [java.io.EOFException, java.io.FileNotFoundException, java.io.IOError, java.io.IOException, java.io.UTFDataFormatException, java.io.UnsupportedEncodingException, java.lang.ArrayIndexOutOfBoundsException, java.lang.AssertionError, java.lang.ClassCastException, java.lang.ClassNotFoundException, java.lang.CloneNotSupportedException, java.lang.Error, java.lang.Exception, java.lang.ExceptionInInitializerError, java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.IllegalStateException, java.lang.IndexOutOfBoundsException, java.lang.InstantiationException, java.lang.InterruptedException, java.lang.NoSuchMethodException, java.lang.NullPointerException, java.lang.NumberFormatException, java.lang.OutOfMemoryError, java.lang.RuntimeException, java.lang.SecurityException, java.lang.Throwable, java.lang.UnsupportedOperationException, java.lang.reflect.InvocationTargetException, java.net.ConnectException, java.net.SocketException, java.net.UnknownHostException, java.nio.channels.ClosedChannelException, java.security.NoSuchAlgorithmException, java.security.PrivilegedActionException, java.util.NoSuchElementException, java.util.concurrent.ExecutionException, java.util.concurrent.RejectedExecutionException, java.util.concurrent.TimeoutException, javax.management.MalformedObjectNameException, javax.security.auth.callback.UnsupportedCallbackException, javax.security.auth.login.LoginException, javax.security.sasl.SaslException]
+2026-11-03 18:16:25,796 [trial:] - DEBUG [ExceptionTableParser] - Parsed 43 exceptions from exception table /opt/nis2-legolas/.local/legolas/conf/exception_table.zookeeper: [java.io.EOFException, java.io.FileNotFoundException, java.io.IOError, java.io.IOException, java.io.UTFDataFormatException, java.io.UnsupportedEncodingException, java.lang.ArrayIndexOutOfBoundsException, java.lang.AssertionError, java.lang.ClassCastException, java.lang.ClassNotFoundException, java.lang.CloneNotSupportedException, java.lang.Error, java.lang.Exception, java.lang.ExceptionInInitializerError, java.lang.IllegalAccessException, java.lang.IllegalArgumentException, java.lang.IllegalStateException, java.lang.IndexOutOfBoundsException, java.lang.InstantiationException, java.lang.InterruptedException, java.lang.NoSuchMethodException, java.lang.NullPointerException, java.lang.NumberFormatException, java.lang.OutOfMemoryError, java.lang.RuntimeException, java.lang.SecurityException, java.lang.Throwable, java.lang.UnsupportedOperationException, java.lang.reflect.InvocationTargetException, java.net.ConnectException, java.net.SocketException, java.net.UnknownHostException, java.nio.channels.ClosedChannelException, java.security.NoSuchAlgorithmException, java.security.PrivilegedActionException, java.util.NoSuchElementException, java.util.concurrent.ExecutionException, java.util.concurrent.RejectedExecutionException, java.util.concurrent.TimeoutException, javax.management.MalformedObjectNameException, javax.security.auth.callback.UnsupportedCallbackException, javax.security.auth.login.LoginException, javax.security.sasl.SaslException]
+2026-11-03 18:16:25,800 [trial:] - INFO  [RandomPolicy] - Using RandomPolicy: P = 1/100
+2026-11-03 18:16:25,800 [trial:] - INFO  [InjectionController] - # of trials = 3
+2026-11-03 18:16:25,818 [trial:] - INFO  [RmiServerBase] - AbstractStateServer started
+2026-11-03 18:16:25,819 [trial:] - INFO  [RmiServerBase] - FaultInjectorServer started
+2026-11-03 18:16:25,821 [trial:] - INFO  [RmiServerBase] - OrchestratorServer started
+2026-11-03 18:16:25,821 [trial:] - INFO  [MegaServer] - Successfully started the mega server
+2026-11-03 18:16:25,822 [trial:0] - INFO  [OrchestratorMain] - starting trial 0
+2026-11-03 18:16:25,826 [trial:0] - INFO  [MegaServer] - ready for injection
+2026-11-03 18:16:25,827 [trial:0] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:26,184 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 101
+2026-11-03 18:16:26,184 [trial:0] - INFO  [ServerNode] - Server node 1 of instance id 1 started with pid 101
+2026-11-03 18:16:26,186 [trial:0] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:26,186 [trial:0] - INFO  [LogMonitor] - LogMonitor for ServerNode 1 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/0/logs-1/zookeeper-legolas-server-legolas.out
+2026-11-03 18:16:26,367 [trial:] - INFO  [RandomPolicy] - injected in Uid{server=1, name='org.apache.zookeeper.server.quorum.QuorumPeerMain', state=AbstractState{MethodSig='<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>', id=0}, eid=3, op='<java.io.OutputStream: void write(byte[],int,int)>'}
+2026-11-03 18:16:26,370 [trial:0] - INFO  [ServerNode] - ServerNode 1 instance 1 is now injected
+2026-11-03 18:16:26,527 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 140
+2026-11-03 18:16:26,528 [trial:0] - INFO  [ServerNode] - Server node 2 of instance id 2 started with pid 140
+2026-11-03 18:16:26,528 [trial:0] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:26,528 [trial:0] - INFO  [LogMonitor] - LogMonitor for ServerNode 2 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/0/logs-2/zookeeper-legolas-server-legolas.out
+2026-11-03 18:16:26,875 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 179
+2026-11-03 18:16:26,875 [trial:0] - INFO  [ServerNode] - Server node 3 of instance id 3 started with pid 179
+2026-11-03 18:16:26,875 [trial:0] - INFO  [LogMonitor] - LogMonitor for ServerNode 3 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/0/logs-3/zookeeper-legolas-server-legolas.out
+2026-11-03 18:16:30,165 [trial:] - INFO  [ClientWorkload] - client 0 started with pid 256
+2026-11-03 18:16:30,172 [trial:] - INFO  [ClientWorkload] - client 1 started with pid 255
+2026-11-03 18:16:30,173 [trial:] - INFO  [ClientWorkload] - client 2 started with pid 254
+2026-11-03 18:16:55,835 [trial:0] - INFO  [CreateWorkload] - Phase 0 - create :[0/3, 3/3, 4/4]
+2026-11-03 18:16:55,838 [trial:0] - INFO  [ServerNode] - Server node 1 of instance id 1 terminated
+2026-11-03 18:16:55,855 [trial:0] - INFO  [ServerNode] - Server node 2 of instance id 2 terminated
+2026-11-03 18:16:55,870 [trial:0] - INFO  [ServerNode] - Server node 3 of instance id 3 terminated
+2026-11-03 18:16:57,903 [trial:1] - INFO  [OrchestratorMain] - starting trial 1
+2026-11-03 18:16:57,905 [trial:1] - INFO  [MegaServer] - ready for injection
+2026-11-03 18:16:57,905 [trial:1] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:58,227 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 355
+2026-11-03 18:16:58,227 [trial:1] - INFO  [ServerNode] - Server node 1 of instance id 1 started with pid 355
+2026-11-03 18:16:58,227 [trial:1] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:58,227 [trial:1] - INFO  [LogMonitor] - LogMonitor for ServerNode 1 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/1/logs-1/zookeeper-legolas-server-legolas.out
+2026-11-03 18:16:58,568 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 391
+2026-11-03 18:16:58,568 [trial:1] - INFO  [ServerNode] - Server node 2 of instance id 2 started with pid 391
+2026-11-03 18:16:58,569 [trial:1] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:16:58,569 [trial:1] - INFO  [LogMonitor] - LogMonitor for ServerNode 2 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/1/logs-2/zookeeper-legolas-server-legolas.out
+2026-11-03 18:16:58,603 [trial:] - INFO  [RandomPolicy] - injected in Uid{server=1, name='org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread', state=AbstractState{MethodSig='<org.apache.zookeeper.server.quorum.QuorumCnxManager$QuorumConnectionReqThread: void run()>', id=0}, eid=30, op='<java.net.Socket: void setKeepAlive(boolean)>'}
+2026-11-03 18:16:58,611 [trial:1] - INFO  [ServerNode] - ServerNode 1 instance 1 is now injected
+2026-11-03 18:16:58,928 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 437
+2026-11-03 18:16:58,928 [trial:1] - INFO  [ServerNode] - Server node 3 of instance id 3 started with pid 437
+2026-11-03 18:16:58,928 [trial:1] - INFO  [LogMonitor] - LogMonitor for ServerNode 3 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/1/logs-3/zookeeper-legolas-server-legolas.out
+2026-11-03 18:17:02,192 [trial:] - INFO  [ClientWorkload] - client 2 started with pid 523
+2026-11-03 18:17:02,195 [trial:] - INFO  [ClientWorkload] - client 1 started with pid 525
+2026-11-03 18:17:02,267 [trial:] - INFO  [ClientWorkload] - client 0 started with pid 524
+2026-11-03 18:17:03,643 [trial:] - INFO  [ClientWorkload] - client 4 started with pid 622
+2026-11-03 18:17:03,656 [trial:] - INFO  [ClientWorkload] - client 8 started with pid 623
+2026-11-03 18:17:03,661 [trial:] - INFO  [ClientWorkload] - client 3 started with pid 619
+2026-11-03 18:17:03,664 [trial:] - INFO  [ClientWorkload] - client 7 started with pid 621
+2026-11-03 18:17:03,665 [trial:] - INFO  [ClientWorkload] - client 6 started with pid 620
+2026-11-03 18:17:03,677 [trial:] - INFO  [ClientWorkload] - client 5 started with pid 618
+2026-11-03 18:17:06,738 [trial:1] - INFO  [CreateWorkload] - Phase 0 - create :[3/3, 3/3, 4/4]
+2026-11-03 18:17:06,738 [trial:1] - INFO  [ReadWriteWorkload] - Phase 1 - read   :[40/40, 40/40, 40/40]
+2026-11-03 18:17:06,738 [trial:1] - INFO  [ReadWriteWorkload] - Phase 1 - write  :[40/40, 40/40, 40/40]
+2026-11-03 18:17:06,743 [trial:1] - INFO  [ServerNode] - Server node 1 of instance id 1 terminated
+2026-11-03 18:17:06,748 [trial:1] - INFO  [ServerNode] - Server node 2 of instance id 2 terminated
+2026-11-03 18:17:06,757 [trial:1] - INFO  [ServerNode] - Server node 3 of instance id 3 terminated
+2026-11-03 18:17:08,811 [trial:2] - INFO  [OrchestratorMain] - starting trial 2
+2026-11-03 18:17:08,818 [trial:2] - INFO  [MegaServer] - ready for injection
+2026-11-03 18:17:08,818 [trial:2] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:17:09,155 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 769
+2026-11-03 18:17:09,155 [trial:2] - INFO  [ServerNode] - Server node 1 of instance id 1 started with pid 769
+2026-11-03 18:17:09,155 [trial:2] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:17:09,155 [trial:2] - INFO  [LogMonitor] - LogMonitor for ServerNode 1 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/2/logs-1/zookeeper-legolas-server-legolas.out
+2026-11-03 18:17:09,287 [trial:] - INFO  [RandomPolicy] - injected in Uid{server=1, name='org.apache.zookeeper.server.quorum.QuorumPeerMain', state=AbstractState{MethodSig='<org.apache.zookeeper.server.quorum.QuorumPeerMain: void main(java.lang.String[])>', id=0}, eid=3, op='<org.apache.jute.OutputArchive: void endRecord(org.apache.jute.Record,java.lang.String)>'}
+2026-11-03 18:17:09,297 [trial:2] - INFO  [ServerNode] - ServerNode 1 instance 1 is now injected
+2026-11-03 18:17:09,522 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 805
+2026-11-03 18:17:09,522 [trial:2] - INFO  [ServerNode] - Server node 2 of instance id 2 started with pid 805
+2026-11-03 18:17:09,523 [trial:2] - DEBUG [ServerNode] - Target ZK version 3.6.2, isNew true
+2026-11-03 18:17:09,523 [trial:2] - INFO  [LogMonitor] - LogMonitor for ServerNode 2 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/2/logs-2/zookeeper-legolas-server-legolas.out
+2026-11-03 18:17:09,875 [trial:] - INFO  [OrchestratorServer] - Received registration request from pid 842
+2026-11-03 18:17:09,875 [trial:2] - INFO  [ServerNode] - Server node 3 of instance id 3 started with pid 842
+2026-11-03 18:17:09,875 [trial:2] - INFO  [LogMonitor] - LogMonitor for ServerNode 3 started to watch /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/trials/2/logs-3/zookeeper-legolas-server-legolas.out
+2026-11-03 18:17:13,174 [trial:] - INFO  [ClientWorkload] - client 1 started with pid 914
+2026-11-03 18:17:13,174 [trial:] - INFO  [ClientWorkload] - client 0 started with pid 913
+2026-11-03 18:17:13,181 [trial:] - INFO  [ClientWorkload] - client 2 started with pid 915
+2026-11-03 18:17:38,829 [trial:2] - INFO  [CreateWorkload] - Phase 0 - create :[0/3, 3/3, 4/4]
+2026-11-03 18:17:38,834 [trial:2] - INFO  [ServerNode] - Server node 1 of instance id 1 terminated
+2026-11-03 18:17:38,840 [trial:2] - INFO  [ServerNode] - Server node 2 of instance id 2 terminated
+2026-11-03 18:17:38,852 [trial:2] - INFO  [ServerNode] - Server node 3 of instance id 3 terminated
+2026-11-03 18:17:40,866 [trial:2] - INFO  [RmiServerBase] - AbstractStateServer is shut down
+2026-11-03 18:17:40,866 [trial:2] - INFO  [RmiServerBase] - FaultInjectorServer is shut down
+2026-11-03 18:17:40,867 [trial:2] - INFO  [RmiServerBase] - OrchestratorServer is shut down
+2026-11-03 18:17:40,867 [trial:2] - INFO  [OrchestratorMain] - Legolas orchestrator server ends

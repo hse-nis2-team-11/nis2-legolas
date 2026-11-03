@@ -1,0 +1,105 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m -XX:ActiveProcessorCount=2 -Djava.rmi.server.hostname=127.0.0.1 -Djava.net.preferIPv4Stack=true -Duser.name=legolas
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: ./zookeeper_audit.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:207)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.<clinit>(ZooKeeperGrayClientMain.java:35)
+2026-11-03 18:10:21,265 [myid:] - INFO  [main:ZooKeeperGrayClientMain@163] - My client id is 7
+2026-11-03 18:10:21,281 [myid:] - INFO  [main:ZooKeeperGrayClientMain@166] - My process's pid is 381
+2026-11-03 18:10:21,757 [myid:] - INFO  [main:ZooKeeperGrayClientMain@49] - running command [write, 10713, 2, 10, 40]
+2026-11-03 18:10:21,769 [myid:] - INFO  [main:Environment@98] - Client environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+2026-11-03 18:10:21,769 [myid:] - INFO  [main:Environment@98] - Client environment:host.name=localhost
+2026-11-03 18:10:21,769 [myid:] - INFO  [main:Environment@98] - Client environment:java.version=1.8.0_504
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.vendor=Temurin
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.home=/opt/nis2-legolas/.local/jdk8/jre
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.class.path=/opt/nis2-legolas/.local/legolas/workspace/legolas-zk/conf-1:/opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.io.tmpdir=/tmp
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:java.compiler=<NA>
+2026-11-03 18:10:21,770 [myid:] - INFO  [main:Environment@98] - Client environment:os.name=Linux
+2026-11-03 18:10:21,771 [myid:] - INFO  [main:Environment@98] - Client environment:os.arch=amd64
+2026-11-03 18:10:21,771 [myid:] - INFO  [main:Environment@98] - Client environment:os.version=7.1.9-arch1-2
+2026-11-03 18:10:21,771 [myid:] - INFO  [main:Environment@98] - Client environment:user.name=legolas
+2026-11-03 18:10:21,772 [myid:] - INFO  [main:Environment@98] - Client environment:user.home=?
+2026-11-03 18:10:21,772 [myid:] - INFO  [main:Environment@98] - Client environment:user.dir=/opt/nis2-legolas/.local/legolas
+2026-11-03 18:10:21,772 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.free=233MB
+2026-11-03 18:10:21,772 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.max=455MB
+2026-11-03 18:10:21,772 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.total=240MB
+2026-11-03 18:10:21,776 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10713 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/708049632@2437c6dc
+2026-11-03 18:10:21,785 [myid:] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-03 18:10:21,800 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2026-11-03 18:10:21,858 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-03 18:10:21,867 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10713.
+2026-11-03 18:10:21,867 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:10:21,874 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@999] - Socket connection established, initiating session, client: /127.0.0.1:51418, server: localhost/127.0.0.1:10713
+2026-11-03 18:10:22,058 [myid:localhost:10713] - INFO  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1433] - Session establishment complete on server localhost/127.0.0.1:10713, session id = 0x2000141df500001, negotiated timeout = 7000
+2026-11-03 18:10:22,173 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 1, time = 910280094
+2026-11-03 18:10:22,284 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 2, time = 1021307573
+2026-11-03 18:10:22,421 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 3, time = 1158432171
+2026-11-03 18:10:22,495 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 4, time = 1232327835
+2026-11-03 18:10:22,582 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 5, time = 1319296741
+2026-11-03 18:10:22,673 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 6, time = 1410493171
+2026-11-03 18:10:22,760 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 7, time = 1496919273
+2026-11-03 18:10:22,794 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 8, time = 1531554227
+2026-11-03 18:10:22,951 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 9, time = 1688565288
+2026-11-03 18:10:23,061 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 10, time = 1797851643
+2026-11-03 18:10:23,178 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 11, time = 1915517444
+2026-11-03 18:10:23,293 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 12, time = 2029771971
+2026-11-03 18:10:23,365 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 13, time = 2102373795
+2026-11-03 18:10:23,403 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 14, time = 2140582741
+2026-11-03 18:10:23,554 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 15, time = 2291398416
+2026-11-03 18:10:23,584 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 16, time = 2321498355
+2026-11-03 18:10:23,672 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 17, time = 2409722118
+2026-11-03 18:10:23,751 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 18, time = 2488641239
+2026-11-03 18:10:23,775 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 19, time = 2512739227
+2026-11-03 18:10:23,854 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 20, time = 2591634703
+2026-11-03 18:10:23,873 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 21, time = 2610497866
+2026-11-03 18:10:23,888 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 22, time = 2625517408
+2026-11-03 18:10:23,962 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 23, time = 2698927908
+2026-11-03 18:10:23,989 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 24, time = 2725888055
+2026-11-03 18:10:24,060 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 25, time = 2796885202
+2026-11-03 18:10:24,111 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 26, time = 2848386953
+2026-11-03 18:10:24,168 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 27, time = 2905600410
+2026-11-03 18:10:24,195 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 28, time = 2932400535
+2026-11-03 18:10:24,273 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 29, time = 3009886983
+2026-11-03 18:10:24,292 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 30, time = 3029095317
+2026-11-03 18:10:24,357 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 31, time = 3094273828
+2026-11-03 18:10:24,372 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 32, time = 3109501443
+2026-11-03 18:10:24,388 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 33, time = 3124798058
+2026-11-03 18:10:24,459 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 34, time = 3196703409
+2026-11-03 18:10:24,476 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 35, time = 3213342426
+2026-11-03 18:10:24,492 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 36, time = 3229289418
+2026-11-03 18:10:24,556 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 37, time = 3292975193
+2026-11-03 18:10:24,574 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 38, time = 3311560592
+2026-11-03 18:10:24,591 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 39, time = 3328507140
+2026-11-03 18:10:24,656 [myid:] - INFO  [main:ZooKeeperGrayClientMain@75] - progress = 40, time = 3393758448
+2026-11-03 18:10:24,681 [myid:localhost:10713] - WARN  [main-SendThread(localhost:10713):ClientCnxn$SendThread@1279] - An exception was thrown while closing send thread for session 0x2000141df500001.
+EndOfStreamException: Unable to read additional data from server sessionid 0x2000141df500001, likely server has closed socket
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doIO(ClientCnxnSocketNIO.java:77)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:350)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:10:24,785 [myid:] - INFO  [main:ZooKeeper@1619] - Session: 0x2000141df500001 closed
+2026-11-03 18:10:24,785 [myid:] - INFO  [main-EventThread:ClientCnxn$EventThread@577] - EventThread shut down for session: 0x2000141df500001

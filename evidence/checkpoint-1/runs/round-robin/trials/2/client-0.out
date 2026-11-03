@@ -1,0 +1,538 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m -XX:ActiveProcessorCount=2 -Djava.rmi.server.hostname=127.0.0.1 -Djava.net.preferIPv4Stack=true -Duser.name=legolas
+log4j:ERROR setFile(null,true) call failed.
+java.io.FileNotFoundException: ./zookeeper_audit.log (Permission denied)
+	at java.io.FileOutputStream.open0(Native Method)
+	at java.io.FileOutputStream.open(FileOutputStream.java:270)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:133)
+	at org.apache.log4j.FileAppender.setFile(FileAppender.java:294)
+	at org.apache.log4j.RollingFileAppender.setFile(RollingFileAppender.java:207)
+	at org.apache.log4j.FileAppender.activateOptions(FileAppender.java:165)
+	at org.apache.log4j.config.PropertySetter.activate(PropertySetter.java:307)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:172)
+	at org.apache.log4j.config.PropertySetter.setProperties(PropertySetter.java:104)
+	at org.apache.log4j.PropertyConfigurator.parseAppender(PropertyConfigurator.java:842)
+	at org.apache.log4j.PropertyConfigurator.parseCategory(PropertyConfigurator.java:768)
+	at org.apache.log4j.PropertyConfigurator.parseCatsAndRenderers(PropertyConfigurator.java:672)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:516)
+	at org.apache.log4j.PropertyConfigurator.doConfigure(PropertyConfigurator.java:580)
+	at org.apache.log4j.helpers.OptionConverter.selectAndConfigure(OptionConverter.java:526)
+	at org.apache.log4j.LogManager.<clinit>(LogManager.java:127)
+	at org.slf4j.impl.Log4jLoggerFactory.<init>(Log4jLoggerFactory.java:66)
+	at org.slf4j.impl.StaticLoggerBinder.<init>(StaticLoggerBinder.java:72)
+	at org.slf4j.impl.StaticLoggerBinder.<clinit>(StaticLoggerBinder.java:45)
+	at org.slf4j.LoggerFactory.bind(LoggerFactory.java:150)
+	at org.slf4j.LoggerFactory.performInitialization(LoggerFactory.java:124)
+	at org.slf4j.LoggerFactory.getILoggerFactory(LoggerFactory.java:412)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:357)
+	at org.slf4j.LoggerFactory.getLogger(LoggerFactory.java:383)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.<clinit>(ZooKeeperGrayClientMain.java:35)
+2026-11-03 18:14:56,056 [myid:] - INFO  [main:ZooKeeperGrayClientMain@163] - My client id is 0
+2026-11-03 18:14:56,067 [myid:] - INFO  [main:ZooKeeperGrayClientMain@166] - My process's pid is 914
+2026-11-03 18:14:56,246 [myid:] - INFO  [main:ZooKeeperGrayClientMain@49] - running command [create, 10712, 1, 10, 3]
+2026-11-03 18:14:56,257 [myid:] - INFO  [main:Environment@98] - Client environment:zookeeper.version=3.6.2--803c7f1a12f85978cb049af5e4ef23bd8b688715, built on 09/04/2020 12:44 GMT
+2026-11-03 18:14:56,257 [myid:] - INFO  [main:Environment@98] - Client environment:host.name=localhost
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.version=1.8.0_504
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.vendor=Temurin
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.home=/opt/nis2-legolas/.local/jdk8/jre
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.class.path=/opt/nis2-legolas/.local/legolas/workspace/legolas-zk/conf-1:/opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.io.tmpdir=/tmp
+2026-11-03 18:14:56,258 [myid:] - INFO  [main:Environment@98] - Client environment:java.compiler=<NA>
+2026-11-03 18:14:56,259 [myid:] - INFO  [main:Environment@98] - Client environment:os.name=Linux
+2026-11-03 18:14:56,259 [myid:] - INFO  [main:Environment@98] - Client environment:os.arch=amd64
+2026-11-03 18:14:56,259 [myid:] - INFO  [main:Environment@98] - Client environment:os.version=7.1.9-arch1-2
+2026-11-03 18:14:56,259 [myid:] - INFO  [main:Environment@98] - Client environment:user.name=legolas
+2026-11-03 18:14:56,260 [myid:] - INFO  [main:Environment@98] - Client environment:user.home=?
+2026-11-03 18:14:56,260 [myid:] - INFO  [main:Environment@98] - Client environment:user.dir=/opt/nis2-legolas/.local/legolas
+2026-11-03 18:14:56,260 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.free=233MB
+2026-11-03 18:14:56,260 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.max=455MB
+2026-11-03 18:14:56,261 [myid:] - INFO  [main:Environment@98] - Client environment:os.memory.total=240MB
+2026-11-03 18:14:56,264 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10712 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/708049632@2437c6dc
+2026-11-03 18:14:56,270 [myid:] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-03 18:14:56,277 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2026-11-03 18:14:56,286 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-03 18:14:56,315 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:14:56,315 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:14:56,323 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:14:57,427 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:14:57,427 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:14:57,428 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:14:58,529 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:14:58,530 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:14:58,530 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:14:59,631 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:14:59,631 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:14:59,632 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:00,732 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:00,733 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:00,733 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:01,833 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:01,834 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:01,834 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:02,934 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:02,934 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:02,935 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:03,287 [myid:] - WARN  [main:ZooKeeperGrayClientMain@103] - ZooKeeper client exception -- java.lang.Exception: ZooKeeper client timeout in starting
+java.lang.Exception: ZooKeeper client timeout in starting
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient.<init>(ZooKeeperGrayClient.java:47)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.create(ZooKeeperGrayClientMain.java:90)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.run(ZooKeeperGrayClientMain.java:64)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.main(ZooKeeperGrayClientMain.java:173)
+2026-11-03 18:15:03,308 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10712 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/708049632@2a098129
+2026-11-03 18:15:03,308 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2026-11-03 18:15:03,309 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-03 18:15:03,310 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:03,310 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:03,311 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:04,035 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:04,036 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:04,036 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:04,411 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:04,412 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:04,412 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:05,136 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:05,137 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:05,137 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:05,513 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:05,513 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:05,514 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:06,238 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:06,238 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:06,239 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:06,615 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:06,615 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:06,615 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:07,339 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:07,339 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:07,340 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:07,717 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:07,717 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:07,718 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:08,440 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:08,441 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:08,441 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:08,818 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:08,819 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:08,819 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:09,541 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:09,542 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:09,542 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:09,920 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:09,920 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:09,921 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:10,309 [myid:] - WARN  [main:ZooKeeperGrayClientMain@103] - ZooKeeper client exception -- java.lang.Exception: ZooKeeper client timeout in starting
+java.lang.Exception: ZooKeeper client timeout in starting
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient.<init>(ZooKeeperGrayClient.java:47)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.create(ZooKeeperGrayClientMain.java:90)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.run(ZooKeeperGrayClientMain.java:64)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.main(ZooKeeperGrayClientMain.java:173)
+2026-11-03 18:15:10,330 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10712 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/708049632@3ada9e37
+2026-11-03 18:15:10,331 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2026-11-03 18:15:10,331 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-03 18:15:10,332 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:10,332 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:10,333 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:10,643 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:10,643 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:10,643 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:11,022 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:11,022 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:11,023 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:11,434 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:11,434 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:11,434 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:11,744 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:11,745 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:11,745 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:12,124 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:12,124 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:12,125 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:12,535 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:12,536 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:12,536 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:12,846 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:12,846 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:12,847 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:13,226 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:13,226 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:13,227 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:13,637 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:13,637 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:13,638 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:13,948 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:13,948 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:13,948 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:14,328 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:14,328 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:14,329 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:14,739 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:14,739 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:14,740 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:15,049 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:15,049 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:15,050 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:15,430 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:15,430 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:15,431 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:15,840 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:15,841 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:15,841 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:16,151 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:16,151 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:16,151 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:16,531 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:16,532 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:16,532 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:16,942 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:16,942 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:16,943 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:17,252 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:17,252 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:17,252 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:17,332 [myid:] - WARN  [main:ZooKeeperGrayClientMain@103] - ZooKeeper client exception -- java.lang.Exception: ZooKeeper client timeout in starting
+java.lang.Exception: ZooKeeper client timeout in starting
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient.<init>(ZooKeeperGrayClient.java:47)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.create(ZooKeeperGrayClientMain.java:90)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.run(ZooKeeperGrayClientMain.java:64)
+	at edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain.main(ZooKeeperGrayClientMain.java:173)
+2026-11-03 18:15:17,352 [myid:] - INFO  [main:ZooKeeper@1006] - Initiating client connection, connectString=localhost:10712 sessionTimeout=7000 watcher=edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClient$$Lambda$8/708049632@63e31ee
+2026-11-03 18:15:17,353 [myid:] - INFO  [main:ClientCnxnSocket@239] - jute.maxbuffer value is 1048575 Bytes
+2026-11-03 18:15:17,353 [myid:] - INFO  [main:ClientCnxn@1716] - zookeeper.request.timeout value is 0. feature enabled=false
+2026-11-03 18:15:17,355 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:17,355 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:17,355 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:17,633 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:17,633 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:17,634 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:18,044 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:18,044 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:18,045 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:18,353 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:18,353 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:18,354 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:18,456 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:18,464 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:18,465 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:18,735 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:18,735 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:18,736 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:19,146 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:19,146 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:19,146 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:19,454 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:19,454 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:19,455 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:19,566 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:19,566 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:19,566 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:19,836 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:19,837 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:19,837 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:20,247 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:20,247 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:20,247 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:20,555 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:20,555 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:20,556 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:20,667 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:20,667 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:20,668 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:20,938 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:20,938 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:20,939 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:21,348 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:21,348 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:21,348 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:21,656 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:21,656 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:21,657 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+2026-11-03 18:15:21,768 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1167] - Opening socket connection to server localhost/127.0.0.1:10712.
+2026-11-03 18:15:21,769 [myid:localhost:10712] - INFO  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1169] - SASL config status: Will not attempt to authenticate using SASL (unknown error)
+2026-11-03 18:15:21,769 [myid:localhost:10712] - WARN  [main-SendThread(localhost:10712):ClientCnxn$SendThread@1285] - Session 0x0 for sever localhost/127.0.0.1:10712, Closing socket connection. Attempting reconnect except it is a SessionExpiredException.
+java.net.ConnectException: Connection refused
+	at sun.nio.ch.SocketChannelImpl.checkConnect(Native Method)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:716)
+	at org.apache.zookeeper.ClientCnxnSocketNIO.doTransport(ClientCnxnSocketNIO.java:344)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:1275)
+/opt/nis2-legolas/.local/legolas/workspace/legolas-zk/client.sh: line 2:   914 Killed                  java -cp /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/conf-1:/opt/nis2-legolas/.local/legolas/driver/zookeeper/3.6.2/target/zk_3_6_2-1.0-jar-with-dependencies.jar edu.umich.order.legolas.zk_3_6_2.ZooKeeperGrayClientMain $@

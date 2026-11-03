@@ -1,0 +1,20 @@
+{
+  "command": [
+    "timeout",
+    "--kill-after=10s",
+    "165s",
+    "bash",
+    "scripts/experiment/start-legolas-zookeeper.sh"
+  ],
+  "cwd": "/opt/nis2-legolas/.local/legolas",
+  "started_utc": "2026-11-03T18:10:15.179623+00:00",
+  "duration_seconds": 34.808,
+  "exit_code": 0,
+  "max_child_rss_kib": 284488,
+  "rss_note": "Linux maximum child RSS; not aggregate simultaneous cluster memory",
+  "environment": {
+    "JAVA_HOME": "/opt/nis2-legolas/.local/jdk8",
+    "JAVA_TOOL_OPTIONS": "-Xmx512m -XX:ActiveProcessorCount=2 -Djava.rmi.server.hostname=127.0.0.1 -Djava.net.preferIPv4Stack=true -Duser.name=legolas",
+    "ZK_SERVER_HEAP": "512"
+  }
+}

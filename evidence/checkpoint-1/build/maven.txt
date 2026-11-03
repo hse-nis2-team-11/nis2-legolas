@@ -1,0 +1,5 @@
+Apache Maven 3.9.9 (8e8579a9e76f7d015ee5ec7bfcdc97d260186937)
+Maven home: /opt/maven
+Java version: 1.8.0_504, vendor: Temurin, runtime: /opt/nis2-legolas/.local/jdk8/jre
+Default locale: en, platform encoding: UTF-8
+OS name: "linux", version: "7.1.9-arch1-2", arch: "amd64", family: "unix"

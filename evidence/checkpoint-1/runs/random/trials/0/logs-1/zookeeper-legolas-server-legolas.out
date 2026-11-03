@@ -1,0 +1,113 @@
+Picked up JAVA_TOOL_OPTIONS: -Xmx512m -XX:ActiveProcessorCount=2 -Djava.rmi.server.hostname=127.0.0.1 -Djava.net.preferIPv4Stack=true -Duser.name=legolas
+2026-11-03 18:16:26,124 [myid:] - INFO  [main:LegolasAgent@94] - My host process's pid is 101
+2026-11-03 18:16:26,127 [myid:] - WARN  [main:LegolasAgentConfig@86] - No configuration file for the agent found, use default configs
+2026-11-03 18:16:26,127 [myid:] - INFO  [main:LegolasAgent@102] - Trying to register with the orchestrator
+2026-11-03 18:16:26,187 [myid:] - INFO  [main:LegolasAgent@111] - Registered LegolasAgent with the orchestrator server and get server id 1
+2026-11-03 18:16:26,190 [myid:] - INFO  [main:ExceptionTable@66] - Exception instance table initialized
+2026-11-03 18:16:26,190 [myid:] - INFO  [main:LegolasAgent@440] - LegolasAgent init: server id = 1
+2026-11-03 18:16:26,203 [myid:] - INFO  [main:QuorumPeerConfig@174] - Reading configuration from: /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/conf-1/zoo.cfg
+2026-11-03 18:16:26,221 [myid:] - INFO  [main:QuorumPeerConfig@457] - clientPortAddress is 127.0.0.1:10712
+2026-11-03 18:16:26,221 [myid:] - INFO  [main:QuorumPeerConfig@464] - secureClientPort is not set
+2026-11-03 18:16:26,221 [myid:] - INFO  [main:QuorumPeerConfig@480] - observerMasterPort is not set
+2026-11-03 18:16:26,221 [myid:] - INFO  [main:QuorumPeerConfig@497] - metricsProvider.className is org.apache.zookeeper.metrics.impl.DefaultMetricsProvider
+2026-11-03 18:16:26,228 [myid:1] - INFO  [main:DatadirCleanupManager@78] - autopurge.snapRetainCount set to 3
+2026-11-03 18:16:26,228 [myid:1] - INFO  [main:DatadirCleanupManager@79] - autopurge.purgeInterval set to 0
+2026-11-03 18:16:26,228 [myid:1] - INFO  [main:DatadirCleanupManager@101] - Purge task is not scheduled.
+2026-11-03 18:16:26,232 [myid:1] - INFO  [main:ManagedUtil@44] - Log4j 1.2 jmx support found and enabled.
+2026-11-03 18:16:26,238 [myid:1] - INFO  [main:QuorumPeerMain@151] - Starting quorum peer, myid=1
+2026-11-03 18:16:26,247 [myid:1] - INFO  [main:ServerMetrics@62] - ServerMetrics initialized with provider org.apache.zookeeper.metrics.impl.DefaultMetricsProvider@54a097cc
+2026-11-03 18:16:26,259 [myid:1] - INFO  [main:ServerCnxnFactory@169] - Using org.apache.zookeeper.server.NIOServerCnxnFactory as server connection factory
+2026-11-03 18:16:26,262 [myid:1] - WARN  [main:ServerCnxnFactory@309] - maxCnxns is not configured, using default value 0.
+2026-11-03 18:16:26,263 [myid:1] - INFO  [main:NIOServerCnxnFactory@666] - Configuring NIO connection handler with 10s sessionless connection timeout, 1 selector thread(s), 4 worker threads, and 64 kB direct buffers.
+2026-11-03 18:16:26,270 [myid:1] - INFO  [main:NIOServerCnxnFactory@674] - binding to port /127.0.0.1:10712
+2026-11-03 18:16:26,278 [myid:1] - INFO  [main:QuorumPeer@752] - zookeeper.quorumCnxnTimeoutMs=-1
+2026-11-03 18:16:26,281 [myid:1] - INFO  [main:X509Util@77] - Setting -D jdk.tls.rejectClientInitiatedRenegotiation=true to disable client-initiated TLS renegotiation
+2026-11-03 18:16:26,283 [myid:1] - INFO  [main:FileTxnSnapLog@124] - zookeeper.snapshot.trust.empty : false
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1683] - Local sessions disabled
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1694] - Local session upgrading disabled
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1661] - tickTime set to 2000
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1705] - minSessionTimeout set to 4000
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1716] - maxSessionTimeout set to 40000
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1741] - initLimit set to 10
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1928] - syncLimit set to 5
+2026-11-03 18:16:26,285 [myid:1] - INFO  [main:QuorumPeer@1943] - connectToLearnerMasterLimit set to 0
+2026-11-03 18:16:26,293 [myid:1] - INFO  [main:ZookeeperBanner@42] - 
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -   ______                  _                                          
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -  |___  /                 | |                                         
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -     / /    ___     ___   | | __   ___    ___   _ __     ___   _ __   
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -    / /    / _ \   / _ \  | |/ /  / _ \  / _ \ | '_ \   / _ \ | '__|
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -   / /__  | (_) | | (_) | |   <  |  __/ |  __/ | |_) | |  __/ | |    
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -  /_____|  \___/   \___/  |_|\_\  \___|  \___| | .__/   \___| |_|
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -                                               | |                     
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] -                                               |_|                     
+2026-11-03 18:16:26,294 [myid:1] - INFO  [main:ZookeeperBanner@42] - 
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:zookeeper.version=3.6.2---1, built on 11/03/2026 18:08 GMT
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:host.name=localhost
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:java.version=1.8.0_504
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:java.vendor=Temurin
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:java.home=/opt/nis2-legolas/.local/jdk8/jre
+2026-11-03 18:16:26,296 [myid:1] - INFO  [main:Environment@98] - Server environment:java.class.path=/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/classes:/opt/nis2-legolas/.local/zookeeper/bin/../build/classes:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/zookeeper-jute-3.6.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/token-provider-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/spotbugs-annotations-4.0.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/snappy-java-1.1.7.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/slf4j-log4j12-1.7.25.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/slf4j-api-1.7.25.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/objenesis-2.6.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/nimbus-jose-jwt-4.41.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-transport-native-unix-common-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-transport-native-epoll-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-transport-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-resolver-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-handler-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-common-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-codec-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/netty-buffer-4.1.50.Final.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/mockito-core-2.27.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/metrics-core-3.2.5.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/log4j-1.2.17.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerby-xdr-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerby-util-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerby-pkix-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerby-config-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerby-asn1-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-util-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-simplekdc-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-server-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-identity-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-crypto-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-core-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-common-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-client-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/kerb-admin-2.0.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/junit-4.12.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jsr305-3.0.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/json-smart-2.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/json-simple-1.1.1.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jmockit-1.48.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jline-2.14.6.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-util-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-servlet-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-server-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-security-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-io-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jetty-http-9.4.24.v20191120.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jcip-annotations-1.0-1.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/javax.servlet-api-3.1.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jackson-databind-2.10.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jackson-core-2.10.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/jackson-annotations-2.10.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/hamcrest-core-1.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/hamcrest-all-1.3.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/commons-lang-2.6.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/commons-io-2.6.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/commons-collections-3.2.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/commons-cli-1.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/byte-buddy-agent-1.9.10.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/byte-buddy-1.9.10.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/bcprov-jdk15on-1.60.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/bcpkix-jdk15on-1.60.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/audience-annotations-0.5.0.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/asm-5.0.4.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/target/lib/accessors-smart-1.2.jar:/opt/nis2-legolas/.local/zookeeper/bin/../build/lib/*.jar:/opt/nis2-legolas/.local/zookeeper/bin/../lib/*.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-*.jar:/opt/nis2-legolas/.local/zookeeper/bin/../zookeeper-server/src/main/resources/lib/*.jar:/opt/nis2-legolas/.local/legolas/workspace/legolas-zk/conf-1:
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:java.io.tmpdir=/tmp
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:java.compiler=<NA>
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:os.name=Linux
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:os.arch=amd64
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:os.version=7.1.9-arch1-2
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:user.name=legolas
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:user.home=?
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:user.dir=/opt/nis2-legolas/.local/legolas
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:os.memory.free=227MB
+2026-11-03 18:16:26,297 [myid:1] - INFO  [main:Environment@98] - Server environment:os.memory.max=455MB
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:Environment@98] - Server environment:os.memory.total=240MB
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@129] - zookeeper.enableEagerACLCheck = false
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@137] - zookeeper.digest.enabled = true
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@141] - zookeeper.closeSessionTxn.enabled = true
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@1444] - zookeeper.flushDelay=0
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@1453] - zookeeper.maxWriteQueuePollTime=0
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@1462] - zookeeper.maxBatchSize=1000
+2026-11-03 18:16:26,298 [myid:1] - INFO  [main:ZooKeeperServer@243] - zookeeper.intBufferStartingSizeBytes = 1024
+2026-11-03 18:16:26,304 [myid:1] - INFO  [main:WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2026-11-03 18:16:26,306 [myid:1] - INFO  [main:WatchManagerFactory@42] - Using org.apache.zookeeper.server.watch.WatchManager as watch manager
+2026-11-03 18:16:26,306 [myid:1] - INFO  [main:ZKDatabase@132] - zookeeper.snapshotSizeFactor = 0.33
+2026-11-03 18:16:26,307 [myid:1] - INFO  [main:ZKDatabase@152] - zookeeper.commitLogCount=500
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@2009] - Using insecure (non-TLS) quorum communication
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@2015] - Port unification disabled
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@174] - multiAddress.enabled set to false
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@199] - multiAddress.reachabilityCheckEnabled set to true
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@186] - multiAddress.reachabilityCheckTimeoutMs set to 1000
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@2469] - QuorumPeer communication is not secured! (SASL auth disabled)
+2026-11-03 18:16:26,318 [myid:1] - INFO  [main:QuorumPeer@2494] - quorum.cnxn.threads.size set to 20
+2026-11-03 18:16:26,327 [myid:1] - INFO  [main:SnapStream@61] - zookeeper.snapshot.compression.method = CHECKED
+2026-11-03 18:16:26,327 [myid:1] - INFO  [main:FileTxnSnapLog@470] - Snapshotting: 0x0 to /opt/nis2-legolas/.local/legolas/workspace/legolas-zk/store-1/version-2/snapshot.0
+2026-11-03 18:16:26,361 [myid:1] - INFO  [main:ZKDatabase@289] - Snapshot loaded in 43 ms, highest zxid is 0x0, digest is 1371985504
+2026-11-03 18:16:26,363 [myid:1] - INFO  [main:QuorumPeer@1105] - currentEpoch not found! Creating with a reasonable default of 0. This should only happen when you are upgrading your installation
+2026-11-03 18:16:26,367 [myid:1] - INFO  [main:LegolasAgent@307] - the stack trace of injection 0 is [(org.apache.zookeeper.common.AtomicFileOutputStream,write,72), (sun.nio.cs.StreamEncoder,writeBytes,221), (sun.nio.cs.StreamEncoder,implFlushBuffer,291), (sun.nio.cs.StreamEncoder,implFlush,295), (sun.nio.cs.StreamEncoder,flush,141), (java.io.OutputStreamWriter,flush,229), (java.io.BufferedWriter,flush,254), (org.apache.zookeeper.common.AtomicFileWritingIdiom,<init>,72), (org.apache.zookeeper.common.AtomicFileWritingIdiom,<init>,54), (org.apache.zookeeper.server.quorum.QuorumPeer,writeLongToFile,2129), (org.apache.zookeeper.server.quorum.QuorumPeer,loadDataBase,1110), (org.apache.zookeeper.server.quorum.QuorumPeer,start,1078), (org.apache.zookeeper.server.quorum.QuorumPeerMain,runFromConfig,227), (org.apache.zookeeper.server.quorum.QuorumPeerMain,initializeAndRun,136), (org.apache.zookeeper.server.quorum.QuorumPeerMain,main,90), ]
+2026-11-03 18:16:26,367 [myid:1] - INFO  [main:LegolasAgent@321] - LegolasAgent injecting exception java.io.IOException
+2026-11-03 18:16:26,368 [myid:1] - ERROR [main:QuorumPeer@1139] - Unable to load database on disk
+java.io.IOException: Legolas injected exception
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at edu.umich.order.legolas.common.fault.ExceptionTable.newException(ExceptionTable.java:116)
+	at edu.umich.order.legolas.common.fault.ExceptionTable.<init>(ExceptionTable.java:60)
+	at edu.umich.order.legolas.common.agent.LegolasAgent.<clinit>(LegolasAgent.java:116)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java)
+2026-11-03 18:16:26,370 [myid:1] - ERROR [main:QuorumPeerMain@113] - Unexpected exception, exiting abnormally
+java.lang.RuntimeException: Unable to run quorum server 
+	at org.apache.zookeeper.server.quorum.QuorumPeer.loadDataBase(QuorumPeer.java:1140)
+	at org.apache.zookeeper.server.quorum.QuorumPeer.start(QuorumPeer.java:1078)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.runFromConfig(QuorumPeerMain.java:227)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.initializeAndRun(QuorumPeerMain.java:136)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java:90)
+Caused by: java.io.IOException: Legolas injected exception
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at edu.umich.order.legolas.common.fault.ExceptionTable.newException(ExceptionTable.java:116)
+	at edu.umich.order.legolas.common.fault.ExceptionTable.<init>(ExceptionTable.java:60)
+	at edu.umich.order.legolas.common.agent.LegolasAgent.<clinit>(LegolasAgent.java:116)
+	at org.apache.zookeeper.server.quorum.QuorumPeerMain.main(QuorumPeerMain.java)
+2026-11-03 18:16:26,371 [myid:1] - INFO  [main:ZKAuditProvider@42] - ZooKeeper audit is disabled.
+2026-11-03 18:16:26,372 [myid:1] - ERROR [main:ServiceUtils@42] - Exiting JVM with code 1

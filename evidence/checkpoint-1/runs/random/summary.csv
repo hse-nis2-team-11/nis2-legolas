@@ -1,0 +1,4 @@
+trial_id,recorded_duration_seconds,create_ok,read_ok,write_ok,workload_completed,granted_injections,executed_injections,preservation_verdict
+0,30.047254,7,0,0,False,1,1,not_checked
+1,8.852476,10,120,120,True,1,1,not_checked
+2,30.035042,7,0,0,False,1,1,not_checked
