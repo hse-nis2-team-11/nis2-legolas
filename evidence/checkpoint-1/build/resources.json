@@ -1,0 +1,7 @@
+{
+  "cpu_model": "AMD Ryzen 5 2600 Six-Core Processor",
+  "host_logical_cpus": 12,
+  "host_memory_kib": 16312092,
+  "container_cpu_limit": 4,
+  "container_memory_gib": 8
+}

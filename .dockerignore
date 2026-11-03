@@ -1,0 +1,9 @@
+**
+!Dockerfile
+!.dockerignore
+!scripts/
+!scripts/**
+**/__pycache__/
+**/*.pyc
+scripts/checkpoint-1/docker.sh
+scripts/checkpoint-1/reproduce.sh
