@@ -28,6 +28,8 @@ https://distsys.ru/osukhoroslov/nis2/src/branch/main/project-tasks/p04-legolas.m
 (\text{NumberOfClients}, \text{InjectionPolicy}, \text{NumberOfInjectionsInAttempt})\\\in\\\{1, 3, 9, N\} \times \{\text{Random}, \text{RoundRobinStateOp}\} \times \{1, 2 \}
 ```
 
+1, 2 — число инъекций за попытку.
+
 Проверять будем свойство safety, а именно: корректность записанных данных после восстановления.
 
 Стоит заметить, что больше одной инъекции за попытку может привести к ложным нарушениям, которые не могли бы возникнуть в адекватном сценарии отказа, поэтому, если такие отказы будут превалировать, вероятно отбросим сценарии с > 1 инъекцией вообще.
