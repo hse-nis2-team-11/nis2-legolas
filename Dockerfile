@@ -4,7 +4,7 @@ FROM ubuntu:22.04@sha256:076e7bf82319619f28dd0aa9c02ab34b055ad37100395b4f49a2ffb
 SHELL ["/bin/bash", "-euo", "pipefail", "-c"]
 
 RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends \
-      ca-certificates curl python3 hostname procps tar gzip coreutils \
+      ca-certificates curl python3 hostname procps tar gzip coreutils patch \
     && rm -rf /var/lib/apt/lists/*
 
 ARG MAVEN_VERSION=3.9.9
@@ -25,6 +25,10 @@ ENV JAVA_HOME=/opt/nis2-legolas/.local/jdk8 \
 # No host .local directory or Maven cache is copied into the image.
 RUN mkdir -p build-evidence \
     && bash scripts/prepare.sh 2>&1 | tee build-evidence/prepare.log
+COPY scripts/scenario/pause-injections.patch /tmp/pause-injections.patch
+COPY scripts/scenario/ensemble-size.patch /tmp/ensemble-size.patch
+RUN patch -d .local/legolas -p1 < /tmp/pause-injections.patch \
+    && patch -d .local/legolas -p1 < /tmp/ensemble-size.patch
 RUN java -version > build-evidence/java.txt 2>&1 \
     && mvn -version > build-evidence/maven.txt \
     && dpkg-query -W > build-evidence/os-packages.txt \
@@ -44,6 +48,10 @@ RUN export LEGOLAS_JAVA_OPTS='-Xmx4g -XX:ActiveProcessorCount=4' \
 RUN cp .local/legolas/data/abstract_states.csv .local/legolas/data/injection_points.csv build-evidence/ \
     && mkdir -p .local/legolas/workspace .local/legolas/logs /results \
     && chmod 1777 .local/legolas/workspace .local/legolas/logs /results
+
+COPY scripts/scenario ./scripts/scenario
+RUN printf '%s:%s\n' .local/legolas/orchestrator/target/*-jar-with-dependencies.jar .local/legolas/driver/zookeeper/3.6.2/target/*-jar-with-dependencies.jar > scenario-classpath \
+    && mkdir scenario-classes && javac -cp "$(cat scenario-classpath)" -d scenario-classes scripts/scenario/*.java
 
 COPY scripts/run_logged.py ./scripts/run_logged.py
 COPY scripts/checkpoint-1/smoke_run.py scripts/checkpoint-1/summarize_smoke.py scripts/checkpoint-1/entrypoint.sh ./scripts/checkpoint-1/

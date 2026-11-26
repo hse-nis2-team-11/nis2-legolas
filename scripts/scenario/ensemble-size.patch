@@ -1,0 +1,67 @@
+--- a/scripts/experiment/setup-legolas-zookeeper.sh
++++ b/scripts/experiment/setup-legolas-zookeeper.sh
+@@ -94,12 +94,20 @@
+ peerPortBase=10813
+ electionPortBase=10915
+ 
++# Adjacent port ranges are spaced 102 apart.
++server_count=${ZK_SERVER_COUNT:-3}
++if ! [[ $server_count =~ ^[1-9][0-9]{0,2}$ ]] || (( server_count > electionPortBase - peerPortBase )); then
++  echo "ZK_SERVER_COUNT must be between 1 and 102" >&2
++  exit 2
++fi
++nodes=($(seq 1 "$server_count"))
++
+ statPort=11111
+ 
+ rm -rf $workspace
+ mkdir -p $workspace
+ 
+-for i in 1 2 3; do
++for i in ${nodes[*]}; do
+   mkdir -p $workspace/store-$i
+   echo $i > $workspace/store-$i/myid
+   mkdir $workspace/conf-$i
+@@ -118,7 +126,7 @@
+ clientPort=$(($clientPortBase + $i))
+ " > $workspace/conf-$i/zoo.cfg;
+ 
+-  for j in 1 2 3; do
++  for j in ${nodes[*]}; do
+     echo "server.$j=localhost:$(($peerPortBase + $j)):$(($electionPortBase + $j))" >> $workspace/conf-$i/zoo.cfg;
+   done;
+ done
+@@ -130,6 +138,7 @@
+ initDataPathName=$metadata_dir
+ version=$version
+ workload=$workload
++serverCount=$server_count
+ injectionController=$injectionController
+ injectionPolicy=$injectionPolicy
+ injectionType=$injectionType
+@@ -143,7 +152,7 @@
+ maxTotalRetries=10
+ " > $workspace/legolas-zk.properties
+ 
+-for i in 1 2 3; do
++for i in ${nodes[*]}; do
+ echo "
+ clientPort.$i=$(($clientPortBase + $i))
+ peerPort.$i=$(($peerPortBase + $i))
+@@ -176,14 +185,14 @@
+ gen_dummy_injection_scripts $workspace
+ 
+ echo "#!/bin/bash
+-for i in 1 2 3; do
++for i in ${nodes[*]}; do
+   ZOOCFGDIR=$workspace/conf-\$i ZOO_LOG_DIR=$workspace/trials/0/logs-\$i $zk_dir/bin/zkServer.sh start
+ done
+ " > $workspace/start-cluster.sh
+ chmod +x $workspace/start-cluster.sh
+ 
+ echo "#!/bin/bash
+-for i in 1 2 3; do
++for i in ${nodes[*]}; do
+   ZOOCFGDIR=$workspace/conf-\$i ZOO_LOG_DIR=$workspace/trials/0/logs-\$i $zk_dir/bin/zkServer.sh stop
+ done
+ " > $workspace/stop-cluster.sh
